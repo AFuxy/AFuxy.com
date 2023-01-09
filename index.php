@@ -1,0 +1,27 @@
+<!doctype html>
+<title>Coming Soon</title>
+<meta property="og:site_name" content="AFuxy">
+<meta property="twitter:site" content="@AFuxy_">
+<meta name="title" content="AFuxy">
+<meta property="og:title" content="AFuxy">
+<meta property="og:theme-color" content="#7dfff8">
+<meta name="theme-color" content="#7dfff8">
+<meta property="og:description" content="Man just doing his thing">
+<meta property="og:url" content="https://afuxy.com">
+<meta property="og:type" content="website">
+<style>
+  body { text-align: center; padding: 150px; }
+  h1 { font-size: 50px; }
+  body { font: 20px Helvetica, sans-serif; color: #333; }
+  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+  a { color: #dc8100; text-decoration: none; }
+  a:hover { color: #333; text-decoration: none; }
+</style>
+
+<article>
+   <h1>Uh oh!</h1>
+    <div>
+        <p>AFuxy.com is currently being worked on <br>Please be patient with us</p>
+        <p>&mdash; <a href="https://bubblez.app/p?zak">Zak</a> (AFuxy)</p>
+    </div>
+</article>
