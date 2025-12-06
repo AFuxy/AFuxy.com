@@ -28,24 +28,20 @@
     
     <style>
         :root {
-            /* Global Dark Theme */
             --bg-color: #0b0c10;
             
-            /* Glass Settings */
             --glass-bg: rgba(255, 255, 255, 0.02); 
             --glass-border: 1px solid rgba(255, 255, 255, 0.1);
             --text-color: #ffffff;
             
-            /* AFuxy Brand Colors */
             --afuxy-cyan: #45efff;
             --afuxy-purple: #9c45ff;
             
-            /* Social Brand Colors */
             --caturra: #fd8b8b;
-            --github: #24292e;
+            --github: #BFFFD1;
             --mixcloud: #52aad8;
             --bluesky: #0560FF;
-            --twitter: #000000;
+            --twitter: #1DA1F2;
             --twitch: #9146FF;
             --youtube: #FF0000;
         }
@@ -67,7 +63,6 @@
             overflow-x: hidden;
         }
 
-        /* Particle Container */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -85,14 +80,12 @@
             padding: 2.5rem;
             margin: 20px;
             
-            /* Glass Effect */
             background: var(--glass-bg);
             backdrop-filter: blur(8px); 
             -webkit-backdrop-filter: blur(8px);
             border-radius: 20px;
             border: var(--glass-border);
             
-            /* Subtle Brand Glow */
             box-shadow: 0 0 40px rgba(69, 239, 255, 0.05), 
                         0 0 80px rgba(156, 69, 255, 0.05);
             
@@ -100,7 +93,6 @@
             z-index: 1;
         }
 
-        /* Profile Pic Container */
         .profile-container {
             position: relative;
             width: 130px; 
@@ -109,7 +101,6 @@
             border-radius: 50%;
             padding: 4px; 
             
-            /* The Gradient Ring */
             background: linear-gradient(135deg, var(--afuxy-cyan), var(--afuxy-purple));
             box-shadow: 0 0 25px rgba(156, 69, 255, 0.4); 
         }
@@ -149,7 +140,6 @@
             gap: 15px;
         }
 
-        /* Button Base Styles */
         .link-btn {
             display: flex;
             align-items: center;
@@ -165,7 +155,6 @@
             font-weight: 600;
             font-size: 1rem;
             border-left: 4px solid var(--brand-color);
-            /* Important for tooltip positioning */
             overflow: visible; 
         }
 
@@ -177,7 +166,6 @@
             color: var(--brand-color); 
         }
 
-        /* Specific Brand Color Assignments */
         .caturra { --brand-color: var(--caturra); }
         .github { --brand-color: var(--github); }
         .mixcloud { --brand-color: var(--mixcloud); }
@@ -186,15 +174,11 @@
         .twitch { --brand-color: var(--twitch); }
         .youtube { --brand-color: var(--youtube); }
 
-        /* --- HOVER EFFECTS (SOLID FILL + GLOW) --- */
         .link-btn:hover {
-            /* 1. Solid Fill */
             background: var(--brand-color);
             
-            /* 2. Border Matches */
             border-color: var(--brand-color);
             
-            /* 3. Glowing Effect */
             box-shadow: 0 0 20px var(--brand-color), 0 0 40px rgba(0,0,0,0.3);
             
             transform: translateY(-4px);
@@ -204,20 +188,25 @@
 
         .link-btn:hover i {
             transform: scale(1.2);
-            color: white; /* Icon turns white on hover */
+            color: white;
         }
 
-        /* === TOOLTIP STYLES === */
+        .github:hover i {
+            transform: scale(1.2);
+            color: #24292e;
+        }
+        .github:hover {
+            color: #24292e;
+        }
+
         .link-btn::before {
             content: attr(data-tooltip);
             
-            /* Positioning */
             position: absolute;
             bottom: 100%; 
             left: 50%;
             transform: translateX(-50%) translateY(10px); 
             
-            /* Appearance */
             background: rgba(10, 10, 10, 0.95);
             color: #fff;
             padding: 8px 14px;
@@ -227,32 +216,21 @@
             white-space: nowrap;
             letter-spacing: 0.5px;
             
-            /* Border matches the brand color */
             border: 1px solid var(--brand-color);
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             
-            /* Animation State */
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             pointer-events: none;
         }
 
-        /* Reveal Tooltip on Hover */
         .link-btn:hover::before {
             opacity: 1;
             visibility: visible;
             transform: translateX(-50%) translateY(-10px); 
         }
 
-        /* Special Case: Twitter & GitHub (Dark Buttons) */
-        /* They fill with black, so they need a WHITE glow to be visible */
-        .twitter:before, .github:before {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.4);
-        }
-
-        /* Mobile Optimization */
         @media (max-width: 480px) {
             .container {
                 width: 90%;
@@ -260,7 +238,6 @@
                 margin: 10px;
             }
 
-            /* Hide Tooltips on Mobile for cleaner UI */
             .link-btn::before {
                 display: none !important;
                 content: none;
@@ -303,7 +280,7 @@
             </a>
             
             <a href="https://twitter.com/AFuxy_" class="link-btn twitter" data-tooltip="Follow For Project Updates" target="_blank">
-                <i class="fa-brands fa-x-twitter"></i> Twitter
+                <i class="fa-brands fa-twitter"></i> Twitter
             </a>
 
             <a href="https://twitch.tv/AFuxy" class="link-btn twitch" data-tooltip="Watch Me Live" target="_blank">
