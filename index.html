@@ -1,31 +1,327 @@
-<!doctype html>
-<title>Github</title>
-<meta http-equiv="refresh" content="0; url=https://github.com/AFuxy">
-<meta property="og:site_name" content="AFuxy">
-<meta property="twitter:site" content="@AFuxy_">
-<meta name="title" content="AFuxy">
-<meta property="og:title" content="AFuxy">
-<meta property="og:theme-color" content="#7dfff8">
-<meta name="theme-color" content="#7dfff8">
-<meta property="og:description" content="Man just doing his thing">
-<meta property="og:url" content="https://afuxy.com">
-<meta property="og:type" content="website">
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFuxy.com</title>
+    <link rel="icon" href="cdn/images/favicon.ico">
 
-<article>
-   <h1>Uh oh!</h1>
-<!--     <div>
-        <p>AFuxy.com is currently being worked on <br>Please be patient with us</p>
-        <p>&mdash; <a href="https://bubblez.app/p?zak">Zak</a> (AFuxy)</p>
-    </div> -->
-  <div>
-    <p>Redirecting...</p>
-  </div>
-</article>
+    <meta name="title" content="AFuxy">
+    <meta name="description" content="Creator • DJ • Dev @ Caturra. Check out all my links here.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://afuxy.com/">
+    <meta property="og:title" content="AFuxy">
+    <meta property="og:description" content="Creator • DJ • Dev @ Caturra. Check out all my links here.">
+    <meta property="og:image" content="https://afuxy.com/cdn/images/logo.png">
+    
+    <meta property="og:theme-color" content="#45efff">
+    <meta name="theme-color" content="#45efff">
+
+    <meta property="twitter:card" content="summary"> 
+    <meta property="twitter:url" content="https://afuxy.com/">
+    <meta property="twitter:title" content="AFuxy">
+    <meta property="twitter:description" content="Creator • DJ • Dev @ Caturra">
+    <meta property="twitter:image" content="https://afuxy.com/cdn/images/logo.png">
+    <meta property="twitter:site" content="@AFuxy_">
+    <meta property="twitter:creator" content="@AFuxy_">
+
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            
+            --glass-bg: rgba(255, 255, 255, 0.02); 
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+            --text-color: #ffffff;
+            
+            --afuxy-cyan: #45efff;
+            --afuxy-purple: #9c45ff;
+            
+            --caturra: #fd8b8b;
+            --github: #24292e;
+            --mixcloud: #52aad8;
+            --bluesky: #0560FF;
+            --twitter: #000000;
+            --twitch: #9146FF;
+            --youtube: #FF0000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-image: radial-gradient(circle at center, #232d38 0%, #0b0c10 100%);
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 420px;
+            padding: 2.5rem;
+            margin: 20px;
+            
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px); 
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 20px;
+            border: var(--glass-border);
+            
+            box-shadow: 0 0 40px rgba(69, 239, 255, 0.05), 
+                        0 0 80px rgba(156, 69, 255, 0.05);
+            
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 130px; 
+            height: 130px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            padding: 4px; 
+            
+            background: linear-gradient(135deg, var(--afuxy-cyan), var(--afuxy-purple));
+            box-shadow: 0 0 25px rgba(156, 69, 255, 0.4); 
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: contain; 
+            
+            background-color: #050508; 
+            border: 3px solid #1a1a1a;
+            
+            padding: 20px; 
+            
+            display: block;
+        }
+
+        .handle {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-decoration: none;
+            color: var(--text-color);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            font-weight: 600;
+            font-size: 1rem;
+            overflow: hidden;
+            border-left: 4px solid var(--brand-color);
+        }
+
+        .link-btn i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.4rem;
+            transition: transform 0.3s ease;
+            color: var(--brand-color); 
+        }
+
+        .caturra { --brand-color: var(--caturra); }
+        .github { --brand-color: var(--github); }
+        .mixcloud { --brand-color: var(--mixcloud); }
+        .bluesky { --brand-color: var(--bluesky); }
+        .twitter { --brand-color: var(--twitter); }
+        .twitch { --brand-color: var(--twitch); }
+        .youtube { --brand-color: var(--youtube); }
+
+        .link-btn:hover {
+            background: var(--brand-color);
+            
+            border-color: var(--brand-color);
+            
+            box-shadow: 0 0 20px var(--brand-color), 0 0 40px rgba(0,0,0,0.3);
+            
+            transform: translateY(-4px);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .twitter:hover, .github:hover {
+            box-shadow: 0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .link-btn:hover i {
+            transform: scale(1.2);
+            color: white; 
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+                padding: 1.5rem;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        
+        <div class="profile-container">
+            <img src="cdn/images/logo.png" alt="AFuxy Logo" class="profile-pic">
+        </div>
+        
+        <div class="handle">AFuxy</div>
+        <p class="bio">Creator &bull; DJ &bull; Dev @ Caturra</p>
+
+        <div class="links">
+            <a href="https://caturra.app" class="link-btn caturra" target="_blank">
+                <i class="fa-solid fa-sparkles"></i> Caturra
+            </a>
+
+            <a href="https://github.com/AFuxy" class="link-btn github" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+            <a href="https://mixcloud.com/AFuxy" class="link-btn mixcloud" target="_blank">
+                <i class="fa-brands fa-mixcloud"></i> Mixcloud
+            </a>
+
+            <a href="https://bsky.app/profile/AFuxy.com" class="link-btn bluesky" target="_blank">
+                <i class="fa-brands fa-bluesky"></i> Bluesky
+            </a>
+            
+            <a href="https://twitter.com/AFuxy_" class="link-btn twitter" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i> Twitter
+            </a>
+
+            <a href="https://twitch.tv/AFuxy" class="link-btn twitch" target="_blank">
+                <i class="fa-brands fa-twitch"></i> Twitch
+            </a>
+
+            <a href="https://youtube.com/@AFuxy" class="link-btn youtube" target="_blank">
+                <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" 
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true,
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.5,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 0.8
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
